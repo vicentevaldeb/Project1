@@ -64,8 +64,6 @@ NAME=ELK-Server	 PUBLICLY ACCESSIBLE=No	IP=10.1.0.6
 
 ELK CONFIGURATION
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because... What is the main advantage of automating configuration with Ansible?
-
 Ansible is an open-source tool which means anybody can use it for free. It is a great tool because it is powerful enough to run complicated modelings and you have the ability to edit the whole app environment as you wish no matter where it is deployed. In addition, it requires no other software assistance which saves both time and local computer memory.
 
 The playbook implements the following tasks: 
@@ -91,9 +89,9 @@ Web-2	IP=10.0.0.7
 
 The following beats are installed:
 
-Filebeat - collects data about the file system
+Filebeat - collects data about the file system.
 
-Metricbeat - collects machine metrics, such as uptime
+Metricbeat - collects machine metrics.
 
 
 USING THE PLAYBOOK
