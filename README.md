@@ -100,26 +100,25 @@ USING THE PLAYBOOK
 
 NOTE: First set up a Azure portal through Azure Services.
 
-SSH into the control node (ssh -i [publickey] [azureusername@JumpboxPublIP]
+-SSH into the control node (ssh -i [publickey] [azureusername@JumpboxPublIP])
 
-Copy the playbook files to the Ansible Control Node.
+-Copy the playbook files to the Ansible Control Node.
 
-#change directories to /etc/ansible# 
-$ cd /etc/ansible
+-Change directories to /etc/ansible ($ cd /etc/ansible)
 
-#make a file directory#
-$ mkdir files
+-Make a file directory ($ mkdir files)
 
-$copy playbooks#
-$ cp /Project-1/ReadMe/Playbooks/*
+-Clone files onto /etc/ansible ($ git clone https://github.com/vicentevaldeb/Project1.git)
 
-Update the hosts file to include webserver and elk.
+-Copy playbooks ($ cp /Project-1/ReadMe/Playbooks/*)
 
-Edit the hosts file to update and to make Ansible run the playbook on a specific machine, specifying which machine to install the ELK server on and which to install Filebeat onto.
+-Update the hosts file to include webserver and elk.
 
-Run the playbook, and navigate to Kibana (http://[Host IP]/app/kibana#/home) to check that the installation worked as expected.
+-Edit the hosts file to update and to make Ansible run the playbook on a specific machine, specifying which machine to install the ELK server on and which to install Filebeat onto.
 
-cd /etc/ansible
+-Run the playbook, and navigate to Kibana (http://[Host IP]/app/kibana#/home) to check that the installation worked as expected.
+
+-Change directories to /etc/ansible ($ cd /etc/ansible)
 
 $ ansible-playbook install_elk.yml elk
 
