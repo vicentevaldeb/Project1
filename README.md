@@ -110,9 +110,6 @@ $ cd /etc/ansible
 #make a file directory#
 $ mkdir files
 
-#clone files onto /etc/ansible#
-$ git clone 
-
 $copy playbooks#
 $ cp /Project-1/ReadMe/Playbooks/*
 
