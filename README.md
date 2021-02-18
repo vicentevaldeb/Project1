@@ -23,7 +23,7 @@ A load balancer effectively distributes traffic from clients across multiple ser
 
 What is the advantage of a jump box?
 
-A jump box is a secure computer that is the basis for launching any administrative task or it can be described as the original point to connect to other servers or suspicious files.
+A jump box is a secure computer that is the basis for launching any administrative task or the original point to connect to other servers or suspicious files.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the jumpbox and system network. Filebeat watches for changes to file changes on the machine. Metricbeat collects metrics from both the operating system and from services running on the server.
 
