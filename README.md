@@ -1,5 +1,11 @@
 ELK STACK PROJECT
 
+.
+.
+.
+.
+.
+
 TASK: Build a log management platform using the open-source Elasticsearch, LogStash, and Kibana (“ELK”) Stack Tools. 
 
 Contents: 
@@ -11,7 +17,11 @@ ELK Configuration
 Target Machines and Beats
 Using the Playbook
 
-
+.
+.
+.
+.
+.
 
 INTRODUCTION AND OVERVIEW 
 
@@ -32,13 +42,21 @@ Deploy Filebeat using Ansible.
 Deploy ELK Stack on a server.
 Diagram network and create a README file. 
 
-
+.
+.
+.
+.
+.
 
 TOPOLOGY
 
 https://github.com/vicentevaldeb/Project1/blob/main/NET%20DIAGRAM.png
 
-
+.
+.
+.
+.
+.
 
 DESCRIPTION OF THE TOPOLOGY
 
@@ -58,7 +76,11 @@ Configuration details of each Virtual Machine are found on the following link. (
 
 https://github.com/vicentevaldeb/Project1/blob/main/Config%20details.png
 
-
+.
+.
+.
+.
+.
 
 ACCESS POLICIES
 
@@ -74,7 +96,11 @@ A summary of the access policies in place can be found in the link below.
 
 https://github.com/vicentevaldeb/Project1/blob/main/Access%20policies.png
 
-
+.
+.
+.
+.
+.
 
 ELK CONFIGURATION
 
@@ -94,7 +120,11 @@ The playbook implements the following tasks:
 
 https://github.com/vicentevaldeb/Project1/blob/main/docker%20command%20line.png
 
-
+.
+.
+.
+.
+.
 
 TARGET MACHINES & BEATS
 
@@ -119,7 +149,11 @@ https://github.com/vicentevaldeb/Project1/blob/main/filebeat%201.png
 
 https://github.com/vicentevaldeb/Project1/blob/main/filebeat%202.png
 
-
+.
+.
+.
+.
+.
 
 METRICBEAT periodically collects metrics from the operating system and services running on the server. Metrics and stats are sent to the specified output (Elasticsearch or Logstash). 
 
@@ -127,7 +161,11 @@ https://github.com/vicentevaldeb/Project1/blob/main/metricbeat%201.png
 
 https://github.com/vicentevaldeb/Project1/blob/main/metricbeat%202.png
 
-
+.
+.
+.
+.
+.
 
 USING THE PLAYBOOK
 
