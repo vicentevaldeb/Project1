@@ -1,22 +1,46 @@
-This list of files has been tested and executed in order to estagblish live ELK deployments on Azure. Files may be used to recreate the entirety of the deployment shown in the Network Diagram file.
+ELK STACK PROJECT
 
-This document contains the following details:
+TASK: Build a log management platform using the open-source Elasticsearch, LogStash, and Kibana (“ELK”) Stack Tools. 
 
--Description of the Topology
+Contents: 
+Introduction and Overview
+Topology
+Description of Topology
+Access Policies
+ELK Configuration
+Target Machines and Beats
+Using the Playbook
 
--Access Policies
-
--ELK Configuration
-
--Target Machines and Beats
-
--Using the Playbooks
 
 
-DESCRIPTION OF THE TOPOLOGY
+INTRODUCTION AND OVERVIEW 
+
+This list of files has been tested and executed in order to establish live ELK deployments on Azure. Files may be used to recreate the entirety of the deployment shown in the Network Diagram file.
+
+Steps to follow: 
+Set up a virtual network with appropriate firewall protections. 
+Protect the cloud network  with a firewall. 
+Deploy virtual computers to the cloud network (Jumpbox and Prov).
+Access VNet from Jumpbox.
+Install and run containers using Docker.
+Set up Ansible connections to VMs inside the VNet.
+Write Ansible playbooks to configure VMs. 
+Create load balancers on Azure platform.
+Create a firewall and load balancer rules to forward traffic to the correct virtual machines.
+Deploy containers using Ansible and Docker.
+Deploy Filebeat using Ansible.
+Deploy ELK Stack on a server.
+Diagram network and create a README file. 
+
+
+
+TOPOLOGY
 
 https://github.com/vicentevaldeb/Project1/blob/main/NET%20DIAGRAM.png
 
+
+
+DESCRIPTION OF THE TOPOLOGY
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the Damn Vulnerable Web App.
 
@@ -30,15 +54,10 @@ A jump box is a secure computer that is the basis for launching any administrati
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the jumpbox and system network. Filebeat watches for file changes on the machine. Metricbeat collects metrics from both the operating system and from services running on the server.
 
-Configuration details of each Virtual Machine. (Name, Function, IP Address, Operating System)
+Configuration details of each Virtual Machine are found on the following link. (Name, Function, IP Address, Operating System)
 
-Jump Box is a gateway. IP=10.0.0.5	Operating System=Linux
+https://github.com/vicentevaldeb/Project1/blob/main/Config%20details.png
 
-Web-1	is a webserver.  IP=10.0.0.6	Operating System=Linux
-
-Web-2	is a webserver	 IP=10.0.0.7	Operating System=Linux
-
-Elk-Server is for monitoring.  IP=10.1.0.6	Operating System=Linux
 
 
 ACCESS POLICIES
@@ -47,22 +66,14 @@ The machines on the internal network are not exposed to the public Internet.
 
 Only the jump box provisioner machine may accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 
-5061 Kibana Port
+The ELK VM is only accessible through SSH and port 22 through the Jumpbox VM and through the 5061 Kibana Port from the Host Machine.
+
 Machines within the network can only be accessed by jump box provisioner.
 
-Which machine did you allow to access your ELK VM?
+A summary of the access policies in place can be found in the link below.
 
-My IP Address: 104.172.224.176
+https://github.com/vicentevaldeb/Project1/blob/main/Access%20policies.png
 
-A summary of the access policies in place can be found in the list below.
-
-NAME=Jump Box	PUBLICLY ACCESSIBLE=Yes	IP=72.179.7.89
-
-NAME=Web-1	PUBLICLY ACCESSIBLE=No	IP=10.1.0.6
-
-NAME=Web-2	PUBLICLY ACCESSIBLE=No	IP=10.1.0.6
-
-NAME=ELK-Server	 PUBLICLY ACCESSIBLE=No	IP=10.1.0.6
 
 
 ELK CONFIGURATION
@@ -81,6 +92,9 @@ The playbook implements the following tasks:
 
 -Download and launch a docker
 
+https://github.com/vicentevaldeb/Project1/blob/main/docker%20command%20line.png
+
+
 
 TARGET MACHINES & BEATS
 
@@ -90,11 +104,29 @@ Web-1	IP=10.0.0.6
 
 Web-2	IP=10.0.0.7
 
+Web-3 IP=10.0.0.8
+
 The following beats are installed:
 
 Filebeat - collects data about the file system.
 
 Metricbeat - collects machine metrics.
+
+
+FILEBEAT monitors log files and locations that are specified, collecting the log events and forwarding them to Elasticsearch or Logstash. 
+
+https://github.com/vicentevaldeb/Project1/blob/main/filebeat%201.png
+
+https://github.com/vicentevaldeb/Project1/blob/main/filebeat%202.png
+
+
+
+METRICBEAT periodically collects metrics from the operating system and services running on the server. Metrics and stats are sent to the specified output (Elasticsearch or Logstash). 
+
+https://github.com/vicentevaldeb/Project1/blob/main/metricbeat%201.png
+
+https://github.com/vicentevaldeb/Project1/blob/main/metricbeat%202.png
+
 
 
 USING THE PLAYBOOK
