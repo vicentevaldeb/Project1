@@ -14,7 +14,7 @@ This document contains the following details:
 
 
 DESCRIPTION OF THE TOPOLOGY
-https://user-images.githubusercontent.com/70492262/116037145-8a07e380-a61c-11eb-8738-ce5afcbc6fa6.pngScreen Shot 2021-04-25 at 10.43.39 PM.png
+
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the Damn Vulnerable Web App.
 
