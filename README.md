@@ -15,6 +15,8 @@ This document contains the following details:
 
 DESCRIPTION OF THE TOPOLOGY
 
+Screen Shot 2021-04-25 at 10.43.39 PM.png
+
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the Damn Vulnerable Web App.
 
 Load balancers enable the application to be readily available, while also restricting inbound access to the network.
